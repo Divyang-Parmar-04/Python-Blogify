@@ -10,6 +10,7 @@ import api from "./utils/api"
 import {setData } from "./features/authSlice"
 
 
+
 function App() {
   
   const { user, isAuthenticated} = useAuth0()
@@ -20,7 +21,7 @@ function App() {
     if (isAuthenticated && user) {
       api.get("/api/auth/getblogs")
         .then((res) => {
-          // console.log(res, "response ")
+          console.log(res, "response ")
           const data = res.data.blogs
           if (!data) {
             alert("somthing went wrong ")
