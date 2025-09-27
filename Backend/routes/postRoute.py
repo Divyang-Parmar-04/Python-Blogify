@@ -17,7 +17,11 @@ def create_blog():
             userName=data.get("userName")
         )
         blog.save()
-        return jsonify({"blog": blog.to_json()}), 201
+        new_blog = blog.to_mongo().to_dict()
+        new_blog["_id"] = str(new_blog["_id"])  # Convert ObjectId to string
+
+        return jsonify({"blog": new_blog}), 201
+  
     except Exception as e:
         return jsonify({"blog": False, "error": str(e)}), 400
 
