@@ -10,7 +10,7 @@ export default function RTE(props) {
   return (
     <div className="RTE-editor">
       <Editor
-        apiKey="by2xze4jtrt279zixtv8sllqcwjy0zrdnk6kjc3nepfww82l"
+        apiKey={config.RTE_API_KEY}
         value={content}
         onEditorChange={(newValue) => onSetContent(newValue)}
         init={{

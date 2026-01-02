@@ -8,4 +8,6 @@ export const config = {
    cloudineryCloudName : String(import.meta.env.VITE_CLOUDINERY_CLOUD_NAME),
    cloudineryUploadPreset : String(import.meta.env.VITE_CLOUDINERY_UPLOAD_PRESET),
 
+   RTE_API_KEY : String(import.meta.env.VITE_RTE_API_KEY)
+
 }
