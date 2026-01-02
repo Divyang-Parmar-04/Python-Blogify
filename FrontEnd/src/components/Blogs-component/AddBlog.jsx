@@ -1,14 +1,11 @@
 import { useAuth0 } from '@auth0/auth0-react'
-import api from '../utils/api'
-import axios from 'axios'
-import React, { useState, useRef,useEffect } from 'react'
+import api from '../../utils/api'
+import { useState, useRef,useEffect } from 'react'
 import { useDispatch } from 'react-redux'
-import { addNewBlog } from "../features/authSlice"
-import {config} from "../env/config"
-import RTE from "../components/RTE"
-import Spinner from './Spinner'
-import Alert from './Alert'
-import ResponseNotification from './ResponseNotification'
+import { addNewBlog } from "../../features/authSlice"
+import {config} from "../../env/config"
+import RTE from "../controllers/RTE"
+import ResponseNotification from '../controllers/ResponseNotification'
 
 
 function AddBlog() {
@@ -29,7 +26,6 @@ function AddBlog() {
   const dispatch = useDispatch()
 
   async function handleuploadFile(file) {
-    console.log(file)
     if ("hello",file) {
       const formData = new FormData()
       formData.append("file", file)
@@ -42,7 +38,6 @@ function AddBlog() {
           body: formData,
         })
         const data = await res.json()
-        console.log("Uploaded to:", data.secure_url)
         // alert("file uploaded successfully")
         return data.secure_url;
       }
@@ -68,7 +63,6 @@ function AddBlog() {
     const currentfile = file
     const text = content || "none"
     const blogType = e.target.blogtype.value
-    console.log(blogType)
     const summary = e.target.summary.value
 
     const imageUrl = await handleuploadFile(currentfile)
@@ -82,7 +76,6 @@ function AddBlog() {
         summary: summary,
         userName: user.email,
       }
-      console.log(blog)
 
       api.post("/api/createblog", blog)
         .then((res) => {

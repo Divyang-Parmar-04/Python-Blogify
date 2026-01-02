@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from "react-router-dom"
-import { useSelector } from 'react-redux'
-import api from '../utils/api'
 
 import { useAuth0 } from "@auth0/auth0-react"
 function Navbar() {
@@ -59,10 +57,14 @@ function Navbar() {
 
         </div>
         <div className="accsess-btn">
-          {isAuthenticated ? (<button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>Logout</button>)
+          {isAuthenticated ? (<button onClick={() => 
+          {
+          // localStorage.setItem('login',false)  
+          logout({ logoutParams: { returnTo: window.location.origin } })
+          }
+          }>Logout</button>)
             : (<>
               <button onClick={() => loginWithRedirect()} className='login-btn'>Sign-up</button>
-              {/* <button onClick={handleSingUp} className='signup-btn'>sign-up</button> */}
             </>
             )
           }

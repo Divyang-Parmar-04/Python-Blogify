@@ -1,7 +1,7 @@
 
-import '../welcome.css';
+import '../../css/welcome.css';
 import {useAuth0} from '@auth0/auth0-react'
-import api from '../utils/api'
+// import api from '../../utils/api'
 
 const WelcomePage = () => {
    

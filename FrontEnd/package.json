@@ -12,18 +12,19 @@
   "dependencies": {
     "@auth0/auth0-react": "^2.3.0",
     "@reduxjs/toolkit": "^2.6.1",
-    "@tailwindcss/vite": "^4.1.11",
+    "@tailwindcss/vite": "^4.1.18",
     "@tinymce/tinymce-react": "^6.1.0",
     "aos": "^2.3.4",
     "axios": "^1.8.4",
     "framer-motion": "^12.6.5",
+    "html-react-parser": "^5.2.11",
     "lucide-react": "^0.525.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hook-form": "^7.55.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.5.0",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.18"
   },
   "devDependencies": {
     "@eslint/js": "^9.21.0",

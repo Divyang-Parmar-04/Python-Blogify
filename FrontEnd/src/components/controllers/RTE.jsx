@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Editor } from '@tinymce/tinymce-react'
-import {config} from '../env/config'
-import api from '../utils/api'
+import {config} from '../../env/config'
+import api from '../../utils/api'
 
 export default function RTE(props) {
    const content = props.content

@@ -12,19 +12,23 @@
 
 .welcome-section h2 {
   font-size: 3em;
-  color: #fff;
+  /* color: #fff; */
+  color: black;
+  font-weight: bold;
   margin-bottom: 10px;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .highlight {
-  color: #048320;
+  color: hsl(133, 94%, 25%);
   font-weight: bold;
 }
 
 .tagline {
+  font-weight: bold;
   font-size: 1.2em;
-  color: #fff;
+  /* color: #fff; */
+  color: black;
   margin-bottom: 15px;
   font-style: italic;
   max-width: 600px;
@@ -32,7 +36,8 @@
 
 .description {
   font-size: 1em;
-  color: #f2f7f9;
+  /* color: #f2f7f9; */
+  color: black;
   margin-bottom: 25px;
   max-width: 500px;
   line-height: 1.6;

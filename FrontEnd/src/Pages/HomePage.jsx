@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 
 //components
-import Home from '../components/Home'
-import Card from '../components/Card'
-import Line from '../components/Line'
+import Home from '../components/Home/Home'
+import Card from '../components/Blogs-component/Card'
+import Line from '../components/controllers/Line'
 
 //hooks
 import { useSelector } from 'react-redux'

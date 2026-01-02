@@ -1,0 +1,111 @@
+/* CARD BASE */
+.card {
+  width: 320px;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+/* IMAGE */
+.card-img-box {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.card-img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* CONTENT */
+.card-info {
+  padding: 16px;
+}
+
+.card-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.card-info p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 14px;
+}
+
+.card-info button {
+  background: #9acd32;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ---------- SKELETON ---------- */
+
+.skeleton-card {
+  pointer-events: none;
+}
+
+.skeleton-img {
+  height: 200px;
+  background: linear-gradient(
+    90deg,
+    #e0e0e0 25%,
+    #f5f5f5 37%,
+    #e0e0e0 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.skeleton-line {
+  height: 14px;
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  background: linear-gradient(
+    90deg,
+    #e0e0e0 25%,
+    #f5f5f5 37%,
+    #e0e0e0 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.skeleton-line.title {
+  height: 18px;
+  width: 80%;
+}
+
+.skeleton-line.short {
+  width: 60%;
+}
+
+.skeleton-btn {
+  width: 80px;
+  height: 32px;
+  border-radius: 16px;
+  margin-top: 12px;
+  background: linear-gradient(
+    90deg,
+    #e0e0e0 25%,
+    #f5f5f5 37%,
+    #e0e0e0 63%
+  );
+  background-size: 400% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+/* SHIMMER */
+@keyframes shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}

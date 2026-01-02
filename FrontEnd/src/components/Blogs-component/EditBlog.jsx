@@ -1,13 +1,12 @@
 import { useAuth0 } from '@auth0/auth0-react'
-import axios from 'axios'
-import React, { useState, useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { updateBlog } from "../features/authSlice"
-import { config } from "../env/config"
-import RTE from "../components/RTE"
+import { updateBlog } from "../../features/authSlice"
+import { config } from "../../env/config"
+import RTE from "../controllers/RTE"
 import { useParams } from 'react-router-dom'
-import ResponseNotification from './ResponseNotification'
-import api from '../utils/api'
+import ResponseNotification from '../controllers/ResponseNotification'
+import api from '../../utils/api'
 
 function EditBlog() {
   //Alert Function 
@@ -51,7 +50,6 @@ function EditBlog() {
 
 
   async function handleuploadFile(file) {
-    console.log(file)
     if ("hello", file) {
       const formData = new FormData()
       formData.append("file", file)
@@ -64,7 +62,6 @@ function EditBlog() {
           body: formData,
         })
         const data = await res.json()
-        console.log("Uploaded to:", data.secure_url)
         alert("file uploaded successfully")
         return data.secure_url;
       }

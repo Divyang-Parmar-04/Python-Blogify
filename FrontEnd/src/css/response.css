@@ -48,12 +48,14 @@
 .rn-title {
   font-size: 20px;
   font-weight: bold;
+  color: black;
   margin-bottom: 8px;
 }
 
 .rn-message {
-  font-size: 14px;
-  color: #4b5563;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0e7b2d;
   margin-bottom: 16px;
 }
 
@@ -131,4 +133,10 @@
     100% {
         background-position: 250% 0, 250% 0
     }
+}
+
+@media (max-width:470px) {
+   .rn-box{
+    width: 300px;
+   }
 }

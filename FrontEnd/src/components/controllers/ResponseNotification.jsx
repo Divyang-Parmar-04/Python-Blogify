@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { motion } from 'framer-motion';
-import '../response.css'; // link to the CSS file
+import '../../css/response.css'; // link to the CSS file
 
 const ResponseNotification = ({ visible, onClose, response, msg }) => {
 
@@ -32,7 +32,7 @@ const ResponseNotification = ({ visible, onClose, response, msg }) => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
               </svg>
             </div>
-            <h2 className="rn-title">Thank You!</h2>
+            {/* <h2 className="rn-title">Thank You!</h2> */}
             <p className="rn-message">{msg}</p>
             <button className="rn-button rn-button-success" onClick={onClose}>OK</button>
           </motion.div>

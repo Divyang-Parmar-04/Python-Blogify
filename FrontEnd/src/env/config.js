@@ -6,5 +6,6 @@ export const config = {
    //cloudinery
 
    cloudineryCloudName : String(import.meta.env.VITE_CLOUDINERY_CLOUD_NAME),
-   cloudineryUploadPreset : String(import.meta.env.VITE_CLOUDINERY_UPLOAD_PRESET)
+   cloudineryUploadPreset : String(import.meta.env.VITE_CLOUDINERY_UPLOAD_PRESET),
+
 }

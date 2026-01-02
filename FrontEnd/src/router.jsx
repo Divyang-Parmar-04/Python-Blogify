@@ -6,8 +6,8 @@ import HomePage from "./Pages/HomePage"
 import CreateBlogPage from './Pages/CreateBlogPage'
 import MyBlogPage from './Pages/MyBlogsPage'
 
-import EditBlog from "./components/EditBlog"
-import Blog from './components/Blog'
+import EditBlog from "./components/Blogs-component/EditBlog"
+import Blog from './Pages/Blog'
 
 const router = createBrowserRouter(
     createRoutesFromElements(

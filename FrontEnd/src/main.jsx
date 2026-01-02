@@ -5,7 +5,7 @@ import { Provider } from "react-redux"
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 // css
-import './index.css'
+import './css/index.css'
 // environment variables
 import {config} from "./env/config.js"
 

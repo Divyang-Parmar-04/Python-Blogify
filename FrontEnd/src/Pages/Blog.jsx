@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios'
+import { useEffect, useState } from 'react';
 import api from '../utils/api'
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate, useParams } from 'react-router-dom';
 import { Edit3, Trash2, Calendar, User, ArrowLeft } from 'lucide-react';
 import { deleteBlog } from '../features/authSlice';
-import Alert from './Alert';
-import '../blog.css';
+import Alert from '../components/controllers/Alert';
+import '../css/blog.css';
 
 import { useAuth0 } from '@auth0/auth0-react'
+import BlogRenderer from '../components/Blogs-component/BlogRender';
 
 const Blog = () => {
 
@@ -54,9 +54,9 @@ const Blog = () => {
               setIsDeleting(false);
             }, 1000);
           }
-          else{
-          // console.log(res.data)
-          alert('somthing went wromg')
+          else {
+            // console.log(res.data)
+            alert('somthing went wromg')
           }
         })
         .catch((err) => {
@@ -125,26 +125,24 @@ const Blog = () => {
 
               <div className="blog-meta-container">
                 <h1>{blog.title}</h1>
-                <div className="meta-details">
+                {/* <div className="meta-details">
                   <div><User className="icon" /> {blog.author}</div>
                   <div>
                     <Calendar className="icon" />
-                    {new Date(blog.createdAt).toLocaleDateString('en-US', {
+                    {new Date(Date.now()).toLocaleDateString('en-US', {
                       year: 'numeric',
                       month: 'long',
                       day: 'numeric',
                     })}
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
-
-            <div className="blog-article-body">
-              <div
-                dangerouslySetInnerHTML={{ __html: blog.content }}
-                className="blog-html-content"
-              />
+          
+            <div className="blog-article-body" style={{ padding: "24px" }}>
+                <BlogRenderer blog={blog}/>
             </div>
+
           </article>
         </div>
       </div>
