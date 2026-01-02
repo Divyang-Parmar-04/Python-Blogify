@@ -9,8 +9,6 @@ import Footer from "./components/Navigation/Footer"
 import api from "./utils/api"
 import { setData } from "./features/authSlice"
 
-
-
 function App() {
 
   const { user, isAuthenticated } = useAuth0()
